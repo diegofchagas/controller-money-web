@@ -7,7 +7,7 @@ const Header = ({onModal}) => {
   return (
     <Container>
       <div className='header'>
-        <img src={logo} alt="logo" />
+        <h1>Controle Financeiro</h1>
         <Button className='btn' nome= 'Nova Transação' onClick={onModal}/>
       </div>
     </Container>

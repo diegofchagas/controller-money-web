@@ -15,9 +15,8 @@ export const Container = styled.div`
     align-items: center;
   }
 
-  .header img{
-    max-width: 100%;
-    display: block;
+  .header h1{
+    font-size: 2.5rem
   }
 
   .btn {
