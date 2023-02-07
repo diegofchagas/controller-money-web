@@ -20,7 +20,8 @@ export const Container = styled.div`
   }
 
   .btn {
-    background: #00875f;
+    //background: #00875f;
+    background-color:#3185FC;
     border-radius: 6px;
     border: none;
     padding: 12px 20px;
@@ -33,7 +34,7 @@ export const Container = styled.div`
     cursor: pointer;
 
     &:hover {
-      background-color: #00b37e;
+      background-color: #3165FC;
       transition: background-color 0.3s;
     }
   }

@@ -33,7 +33,7 @@ const Transacao = () => {
             ? filtro.map((transacao) => (
                 <ul key={transacao.id}>
                   <li>{transacao.descricao}</li>
-                  <li className={transacao.despesa ? "red" : "verde"}>
+                  <li className={transacao.despesa ? "red" : "azul"}>
                     {transacao.despesa === true && " - "}
                     {new Intl.NumberFormat("pt-BR", {
                       style: "currency",
@@ -47,7 +47,7 @@ const Transacao = () => {
             : currentItems?.map((transacao) => (
                 <ul key={transacao.id}>
                   <li>{transacao.descricao}</li>
-                  <li className={transacao.despesa ? "red" : "verde"}>
+                  <li className={transacao.despesa ? "red" : "azul"}>
                     {transacao.despesa === true && " - "}
                     {new Intl.NumberFormat("pt-BR", {
                       style: "currency",

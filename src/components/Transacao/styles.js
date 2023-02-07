@@ -28,8 +28,8 @@ export const Informacoes = styled.div`
     }
   }
 
-  .verde{
-    color: #00B37E;
+  .azul{
+    color: #2E73D5;
     
   }
 

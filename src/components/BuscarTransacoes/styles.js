@@ -33,18 +33,18 @@ export const Form = styled.form`
     gap: 8px;
     background: transparent;
     border-radius: 4px;
-    color: #00b37e;
+    color: #5F8BC9;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    border: 1px solid #00b37e;
+    border: 1px solid #5F8BC9;
 
 
     &:hover {
-      background: #00875f;
-      border: 1px solid #00875f;
+      background: #5F8BC9;;
+      border: 1px solid #4490FC;
       border-radius: 6px;
-      color: #ffffff;
+      color: #E9FAE3;
       transition: background-color 0.4s;
     }
   }

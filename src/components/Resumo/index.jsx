@@ -10,7 +10,8 @@ const Resumo = ({ renda, despesa, total }) => {
     <Container>
       <Card value={renda} titulo="Entradas" img={arrowUp} cor="#323238" />
       <Card value={despesa} titulo="Saídas" img={arrowDown} cor="#323238" />
-      <Card value={total} titulo="Total" img={cifrao} cor="#015F43" />
+      {/* <Card value={total} titulo="Total" img={cifrao} cor="#015F43" /> */}
+      <Card value={total} titulo="Total" img={cifrao} cor="#3185FC" />
     </Container>
   );
 };

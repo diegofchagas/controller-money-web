@@ -95,7 +95,7 @@ const NovaTransacao = ({ children, nome, modalOn, modalOff }) => {
             />
 
             <div className="transacoes">
-              <TransacaoButton cor="#015F43" onClick={handleTransacoE}>
+              <TransacaoButton cor="#3165FC;" onClick={handleTransacoE}>
                 {" "}
                 <img src={arrowUp} alt="seta para cima" /> Entradas
               </TransacaoButton>

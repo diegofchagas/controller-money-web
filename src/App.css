@@ -35,7 +35,7 @@ body {
 }
 
 .paginacao .active{
-  background: #015F43;
+  background: #3185FC;
   color: #E1E1E6;
 }
 
@@ -46,5 +46,5 @@ body {
 }
 
 .paginacao .proximo ,.anterior:hover{
-  color:#00875F;
+  color:#3185FC;
 }

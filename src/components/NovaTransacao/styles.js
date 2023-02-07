@@ -62,7 +62,7 @@ export const ContainerTransacao = styled.div`
     }
 
     &:focus {
-      border: 1px solid #00b37e;
+      border: 1px solid #5F8BC9;
     }
   }
 
@@ -76,7 +76,7 @@ export const ContainerTransacao = styled.div`
   .cadastrar {
     height: 58px;
     border: 0;
-    background: #00875f;
+    background: #3185FC;
     color: #fff;
     font-weight: bold;
     padding: 0 1.25rem;
@@ -86,14 +86,10 @@ export const ContainerTransacao = styled.div`
     font-size: 1rem;
 
     &:hover {
-      background: #00b37e;
+      background: #3165FC;
     }
   }
 
-  .teste {
-    color: white;
-    background-color: blue;
-  }
 `;
 
 export const TransacaoButton = styled.button`
