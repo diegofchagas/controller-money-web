@@ -32,29 +32,29 @@ const Transacao = () => {
           {filtro.length > 0
             ? filtro.map((transacao) => (
                 <ul key={transacao.id}>
-                  <li>{transacao.descricao}</li>
+                  <li>{transacao.inputValor.descricao}</li>
                   <li className={transacao.despesa ? "red" : "azul"}>
                     {transacao.despesa === true && " - "}
                     {new Intl.NumberFormat("pt-BR", {
                       style: "currency",
                       currency: "BRL",
-                    }).format(transacao.quantia)}
+                    }).format(transacao.inputValor.quantia)}
                   </li>
-                  <li>{transacao.categoria}</li>
+                  <li>{transacao.inputValor.inputValor.categoria}</li>
                   <li>{transacao ? format(newDate, "dd/MM/yyyy") : ""}</li>
                 </ul>
               ))
             : currentItems?.map((transacao) => (
                 <ul key={transacao.id}>
-                  <li>{transacao.descricao}</li>
+                  <li>{transacao.inputValor.descricao}</li>
                   <li className={transacao.despesa ? "red" : "azul"}>
-                    {transacao.despesa === true && " - "}
+                    {transacao.inputValor.despesa === true && " - "}
                     {new Intl.NumberFormat("pt-BR", {
                       style: "currency",
                       currency: "BRL",
-                    }).format(transacao.quantia)}
+                    }).format(transacao.inputValor.quantia)}
                   </li>
-                  <li>{transacao.categoria}</li>
+                  <li>{transacao.inputValor.categoria}</li>
                   <li>{transacao ? format(newDate, "dd/MM/yyyy") : ""}</li>
                 </ul>
               ))}
