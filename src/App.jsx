@@ -9,6 +9,7 @@ import { AuthContext } from './components/UseContext/AuthContext';
 import { useContext } from 'react';
 
 
+
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -30,11 +31,11 @@ console.log(transacoes)
 useEffect(() => {
   const montanteGanho = transacoes
     .filter((item) => !item.despesa)
-    .map((transacao) => Number(transacao.quantia));
+    .map((transacao) => Number(transacao.inputValor.quantia));
 
   const montanteDespesas = transacoes
     .filter((item) => item.despesa)
-    .map((transacao) => Number(transacao.quantia));
+    .map((transacao) => Number(transacao.inputValor.quantia));
 
   const entradas = +montanteGanho
     .reduce((acc, valor) => acc + valor, 0)
