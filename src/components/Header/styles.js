@@ -38,10 +38,4 @@ export const Container = styled.div`
       transition: background-color 0.3s;
     }
   }
-
-  .bi {
-    width: 24px;
-  }
-
-
 `;
