@@ -11,9 +11,11 @@ import { Container, ContainerTransacao, TransacaoButton } from "./styles";
 Modal.setAppElement("#root");
 
 const NovaTransacao = ({ children, nome, modalOn, modalOff }) => {
-  const [descricao, setDescricao] = useState("");
-  const [quantia, setQuantia] = useState("");
-  const [categoria, setCategoria] = useState("");
+  const [inputValor, setInputValor] = useState({
+    descricao:'',
+    quantia: '',
+    categoria: ''
+  })
   const [eSaida, setEsaida] = useState(false);
 
   const { criarTransacoes } = useContext(AuthContext);
@@ -22,25 +24,26 @@ const NovaTransacao = ({ children, nome, modalOn, modalOff }) => {
 
   function cadastrarTransacao(e) {
     e.preventDefault();
-    if (!descricao || !quantia) {
-      alert("Informe a descrição e o valor!");
-    } else if (descricao) {
+    const { descricao, quantia, categoria } = inputValor;
+    if (!descricao || !quantia || !categoria) {
+      alert("Informe a descrição,valor e categoria!");
+    } else if (inputValor) {
       criarTransacoes({
         id: geradorID(),
-        descricao,
-        quantia,
-        categoria,
+        inputValor:{
+          descricao,
+          quantia,
+          categoria,
+        },
         despesa: eSaida,
       });
 
-      setDescricao("");
-      setQuantia("");
-      setCategoria("");
-
+      setInputValor({ descricao: '', quantia: '', categoria: '' });
       modalOff();
     }
   }
-
+  console.log(inputValor.descricao)
+  console.log(inputValor.categoria)
   function handleTransacoE(e) {
     e.preventDefault();
     setEsaida(false);
@@ -75,23 +78,23 @@ const NovaTransacao = ({ children, nome, modalOn, modalOff }) => {
             <Input
               className="input"
               placeholder="Descrição"
-              value={descricao}
-              onChange={({ target }) => setDescricao(target.value)}
+              value={inputValor.descricao}
+              onChange={({ target }) => setInputValor((prevState) => ({ ...prevState, descricao: target.value }))}
             />
 
             <Input
               className="input"
               type="number"
               placeholder="Preço"
-              value={quantia}
-              onChange={({ target }) => setQuantia(Number(target.value))}
+              value={inputValor.quantia}
+              onChange={({ target }) => setInputValor((prevState) => ({ ...prevState, quantia: Number(target.value) }))}
             />
 
             <Input
               className="input"
               placeholder="Categoria"
-              value={categoria}
-              onChange={({ target }) => setCategoria(target.value)}
+              value={inputValor.categoria}
+              onChange={({ target }) => setInputValor((prevState) => ({ ...prevState, categoria: target.value }))}
             />
 
             <div className="transacoes">
