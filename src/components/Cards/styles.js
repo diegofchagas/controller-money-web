@@ -4,7 +4,8 @@ export const Card = styled.div`
   background: ${({cor}) => cor};
   padding: 2rem;
   border-radius: 6px;
-
+ min-width:220px;
+  
 
   img {
     width: 26px;
@@ -29,27 +30,21 @@ export const Card = styled.div`
     display: block;
     margin-top: 1rem;
     font-size: 2rem;
-
     font-family: "Roboto";
-
     font-weight: 700;
     font-size: 32px;
     line-height: 140%;
-
     color: #e1e1e6;
   }
-
-  @media (max-width: 750px) {
-  width: 17.5rem;
-
-
+  
+  @media (max-width: 950px) {
+  padding: 1.5rem;
     p {
       font-size: 1rem;
     }
 
-    span {
+    .valor {
       font-size: 1.25rem;
     }
-
   }
 `;
