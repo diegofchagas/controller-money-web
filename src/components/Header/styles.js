@@ -24,7 +24,7 @@ export const Container = styled.div`
     background-color:#3185FC;
     border-radius: 6px;
     border: none;
-    padding: 12px 20px;
+    padding: .75rem 1.25rem;
     font-family: "Roboto";
     font-style: normal;
     font-weight: 700;
@@ -37,5 +37,32 @@ export const Container = styled.div`
       background-color: #3165FC;
       transition: background-color 0.3s;
     }
+  }
+
+  @media(max-width: 950px) {
+    padding: 2rem 0 5.5rem;
+
+  .header{
+    margin-bottom:1rem;
+  }
+  .header h1{
+    font-size: 1.5rem
+  }
+  
+  }
+
+  @media (max-width: 450px) {
+    padding: 1.5rem 0 5.8rem;
+   
+
+  .header h1{
+    font-size: .875rem
+  }
+
+  .btn {
+    padding: .45rem  .872rem;
+    font-size: 12px;
+  }
+  
   }
 `;
