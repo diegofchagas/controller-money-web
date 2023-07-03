@@ -9,7 +9,7 @@ export const Container = styled.div`
 `;
 
 export const ContainerTransacao = styled.div`
-  min-width: 32rem;
+  width: 32rem;
   border-radius: 6px;
   padding: 2.5rem 3rem;
   background: #202024;
@@ -17,8 +17,6 @@ export const ContainerTransacao = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-
 
   h3 {
     font-family: "Roboto";
@@ -89,6 +87,27 @@ export const ContainerTransacao = styled.div`
       background: #3165FC;
     }
   }
+  @media(max-width: 750px){
+    width:25rem;
+
+    h3{
+      font-size:1.25rem;
+    }
+  }
+
+  @media(max-width: 350px){
+    width:20rem;
+    h3{
+      font-size:1rem;
+    }
+
+    .cadastrar{
+      height: 48px;
+      margin-top: 1rem;
+      font-size:.875rem;
+    }
+  }
+ 
 
 `;
 
