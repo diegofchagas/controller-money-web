@@ -65,4 +65,19 @@ export const Container = styled.div`
   }
   
   }
+
+  @media (max-width: 450px) {
+    padding: 1.5rem 0 5.8rem;
+   
+
+  .header h1{
+    display:none;
+  }
+
+  .btn {
+    padding: .45rem  .872rem;
+    font-size: 12px;
+  }
+  
+  }
 `;
