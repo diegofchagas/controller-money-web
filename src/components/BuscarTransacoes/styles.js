@@ -52,6 +52,13 @@ button .bi.bi-search{
   order:-1;
 }
 
+@media (max-width: 375px) {
+
+button {
+background-color:orange;
+}
+}
+
 @media (max-width: 350px) {
 
   input {
