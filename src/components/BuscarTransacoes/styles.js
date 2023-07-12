@@ -39,7 +39,6 @@ export const Form = styled.form`
     cursor: pointer;
     border: 1px solid #5F8BC9;
 
-
     &:hover {
       background: #5F8BC9;;
       border: 1px solid #4490FC;
@@ -51,5 +50,14 @@ export const Form = styled.form`
 
 button .bi.bi-search{
   order:-1;
+}
+
+@media (max-width: 350px) {
+
+  input {
+    &::placeholder {
+      font-size: .800rem;
+    }
+  }
 }
 `;

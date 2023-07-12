@@ -44,20 +44,22 @@ const Transacao = () => {
                   <li>{transacao ? format(newDate, "dd/MM/yyyy") : ""}</li>
                 </ul>
               ))
-            : currentItems?.map((transacao) => (
+              :
+              currentItems?.map((transacao) => (
                 <ul key={transacao.id}>
-                  <li>{transacao.inputValor.descricao}</li>
-                  <li className={transacao.despesa ? "red" : "azul"}>
-                    {transacao.inputValor.despesa === true && " - "}
-                    {new Intl.NumberFormat("pt-BR", {
+                  <li>
+                  <span className="descricao">{transacao.inputValor.descricao}</span>
+                  {transacao.inputValor.despesa === true && " - "}
+                  <span className={transacao.despesa ? "red" : "azul"}>{new Intl.NumberFormat("pt-BR", {
                       style: "currency",
                       currency: "BRL",
-                    }).format(transacao.inputValor.quantia)}
+                    }).format(transacao.inputValor.quantia)}</span>
+                  <span className="categoria">{transacao.inputValor.categoria}</span>
+                  <span className="data">{transacao ? format(newDate, "dd/MM/yyyy") : ""}</span>
                   </li>
-                  <li>{transacao.inputValor.categoria}</li>
-                  <li>{transacao ? format(newDate, "dd/MM/yyyy") : ""}</li>
                 </ul>
-              ))}
+              ))} 
+
         </div>
       </Informacoes>
       <ReactPaginate
