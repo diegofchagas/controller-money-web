@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import calendario from '../../assets/Icons.svg'
+import seta from '../../assets/Seta.svg'
 
 export const Informacoes = styled.div`
     ul {
@@ -20,11 +22,13 @@ export const Informacoes = styled.div`
 
   .azul{
     color: #2E73D5;
+    font-weight:400;
     
   }
 
   .red{
     color: #F75A68;
+    font-weight:400;
   }
 
   @media (max-width: 450px) {
@@ -39,21 +43,53 @@ export const Informacoes = styled.div`
   padding:.875rem;
   gap: 0.75rem;
   align-self: stretch;
+  max-width:20rem;
+  
+ 
 
   .descricao{
     grid-column: 1/-1;
   }
   .categoria{
     grid-column:1;
-  }
-  .data{
-    grid-column:2;
+    display:flex;
+    align-items:center;
+    gap:5px;
   }
 
-  .azul .red{
+  .categoria::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(${seta}) no-repeat center;
+    background-size:cover;
+}
+
+
+  .data{
+    grid-column:2;
+    display:flex;
+    justify-content:end;
+    align-items:center;
+    gap:5px;
+  }
+
+  .data::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(${calendario}) no-repeat center;
+    background-size:cover;
+}
+
+
+  .azul,.red{
     grid-column:1;
+    font-size:1.25rem;
+    font-weight:700;
   }
   }
-  
-  }
+}
 `;

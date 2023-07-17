@@ -8,7 +8,10 @@ const BuscarTransacoes = () => {
   const [busca, setBusca] = useState("");
   const [larguraTela, setLarguraTela] = useState(window.innerWidth)
 
+
   const { transacoes, filtrarTransacoes } = useContext(AuthContext);
+
+  const qtdTransacoes = transacoes.length;
 
   useEffect(() => {
     const atualizarLarguraTela = () => {
@@ -33,6 +36,12 @@ const BuscarTransacoes = () => {
 
   return (
     <Container>
+      { larguraTela <= 375 && (
+      <div className="qtd-transacao">
+      <h3>Transações</h3>
+      <span>{qtdTransacoes} itens</span>
+      </div> )
+      }
       <Form>
         <Input
           type="search"
@@ -40,7 +49,7 @@ const BuscarTransacoes = () => {
           value={busca}
           onChange={({ target }) => setBusca(target.value)}
         />
-        { larguraTela <= 340 ? (
+        { larguraTela <= 375 ? (
         <Button
           onClick={filtroTransacoes}
           img={<i className="bi bi-search"></i>}

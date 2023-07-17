@@ -31,26 +31,28 @@ const Transacao = () => {
         <div>
           {filtro.length > 0
             ? filtro.map((transacao) => (
-                <ul key={transacao.id}>
-                  <li>{transacao.inputValor.descricao}</li>
-                  <li className={transacao.despesa ? "red" : "azul"}>
-                    {transacao.despesa === true && " - "}
-                    {new Intl.NumberFormat("pt-BR", {
-                      style: "currency",
-                      currency: "BRL",
-                    }).format(transacao.inputValor.quantia)}
-                  </li>
-                  <li>{transacao.inputValor.inputValor.categoria}</li>
-                  <li>{transacao ? format(newDate, "dd/MM/yyyy") : ""}</li>
-                </ul>
+              <ul key={transacao.id}>
+              <li>
+              <span className="descricao">{transacao.inputValor.descricao}</span>
+              <span className={transacao.despesa ? "red" : "azul"}>
+              {transacao.despesa === true && " - "}
+                {new Intl.NumberFormat("pt-BR", {
+                  style: "currency",
+                  currency: "BRL",
+                }).format(transacao.inputValor.quantia)}</span>
+              <span className="categoria">{transacao.inputValor.categoria}</span>
+              <span className="data">{transacao ? format(newDate, "dd/MM/yyyy") : ""}</span>
+              </li>
+            </ul>
               ))
               :
               currentItems?.map((transacao) => (
                 <ul key={transacao.id}>
                   <li>
                   <span className="descricao">{transacao.inputValor.descricao}</span>
-                  {transacao.inputValor.despesa === true && " - "}
-                  <span className={transacao.despesa ? "red" : "azul"}>{new Intl.NumberFormat("pt-BR", {
+                  <span className={transacao.despesa ? "red" : "azul"}>
+                  {transacao.despesa === true && " - "}
+                    {new Intl.NumberFormat("pt-BR", {
                       style: "currency",
                       currency: "BRL",
                     }).format(transacao.inputValor.quantia)}</span>

@@ -95,8 +95,8 @@ export const ContainerTransacao = styled.div`
     }
   }
 
-  @media(max-width: 350px){
-    width:20rem;
+  @media(max-width: 375px){
+    width:23.5rem;
     h3{
       font-size:1rem;
     }

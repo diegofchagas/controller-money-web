@@ -10,6 +10,10 @@ export const Container = styled.div`
   gap: 2rem;
   margin-top: -5rem;
   
+  .total{
+    color: #121214;
+    font-size:.875rem;
+  }
 
   @media(max-width: 750px){
     overflow-x:auto;

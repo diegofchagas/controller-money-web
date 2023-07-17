@@ -2,12 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
   background-color: #202024;
   -webkit-font-smoothing: antialiased;
-  font-family: "Roboto", sans-serif;
+  
   color: #e1e1e6;
 }
 

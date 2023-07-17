@@ -5,6 +5,29 @@ export const Container = styled.div`
   max-width: 1120px;
   margin: 4rem auto 0;
   padding: 0 1.5rem;
+
+  .qtd-transacao{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:.938rem;
+
+    h3{
+      font-size:1.125rem;
+      font-weight:400;
+      color: #c4c4cc;
+    }
+
+    span{
+      font-size:1rem;
+      font-weight:400;
+      color:#7C7C8A;
+    }
+  }
+
+  @media (max-width: 375px) {
+    margin: 1rem auto 0;
+}
 `;
 
 export const Form = styled.form`
@@ -32,7 +55,7 @@ export const Form = styled.form`
     padding: 1rem;
     gap: 8px;
     background: transparent;
-    border-radius: 4px;
+    border-radius: 6px;
     color: #5F8BC9;
     font-size: 1rem;
     font-weight: bold;
@@ -54,17 +77,15 @@ button .bi.bi-search{
 
 @media (max-width: 375px) {
 
-button {
-background-color:orange;
-}
-}
-
-@media (max-width: 350px) {
-
-  input {
-    &::placeholder {
-      font-size: .800rem;
-    }
+  button{
+    width: 3.375rem;
+    height:3.375rem;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-left:-10px;
   }
+  button .bi.bi-search{
+  font-size:1.375rem;
+}
 }
 `;

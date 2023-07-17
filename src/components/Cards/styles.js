@@ -35,7 +35,13 @@ export const Card = styled.div`
     line-height: 140%;
     color: #e1e1e6;
   }
-  
+
+  .data{
+    font-size:.875rem;
+    font-weight:400;
+    color:#7C7C8A;
+  }
+
   @media (max-width: 950px) {
   padding: 1.5rem;
     p {
@@ -47,7 +53,7 @@ export const Card = styled.div`
     }
   }
 
-  @media (max-width: 350px) {
+  @media (max-width: 375px) {
     min-width:180px;
     padding: 1rem;
     
@@ -57,6 +63,7 @@ export const Card = styled.div`
 
     .valor {
       font-size: 1rem;
+      margin-bottom:2px;
     }
   }
 `;
