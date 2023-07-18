@@ -84,6 +84,14 @@ export const Informacoes = styled.div`
     background-size:cover;
 }
 
+.lixeira{
+  grid-column:3;
+}
+
+.lixeira .lixo{
+  cursor: pointer;
+}
+
 
   .azul,.red{
     grid-column:1;

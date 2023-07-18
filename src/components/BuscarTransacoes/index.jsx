@@ -29,9 +29,10 @@ const BuscarTransacoes = () => {
   function filtroTransacoes(e) {
     e.preventDefault();
     const filtroT = transacoes.filter(
-      ({ descricao }) => descricao.toLowCase() === busca.toLowerCase()
+      ({ inputValor }) => inputValor.descricao.toLowerCase() === busca.toLowerCase()
     );
     filtrarTransacoes(filtroT);
+
   }
 
   return (

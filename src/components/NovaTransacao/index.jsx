@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../UseContext/AuthContext";
 import arrowUp from "../../assets/arrow-up-circle.svg";
 import arrowDown from "../../assets/arrow-down-circle.svg";
@@ -42,8 +42,8 @@ const NovaTransacao = ({ children, nome, modalOn, modalOff }) => {
       modalOff();
     }
   }
-  console.log(inputValor.descricao)
-  console.log(inputValor.categoria)
+
+
   function handleTransacoE(e) {
     e.preventDefault();
     setEsaida(false);

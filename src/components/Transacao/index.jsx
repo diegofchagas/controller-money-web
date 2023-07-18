@@ -1,11 +1,12 @@
 import React, { useContext, useState, useEffect } from "react";
+import lixeira from '../../assets/trash3.svg'
 import { AuthContext } from "../UseContext/AuthContext";
 import { format } from "date-fns";
 import { Informacoes } from "./styles";
 import ReactPaginate from "react-paginate";
 
 const Transacao = () => {
-  const { transacoes, filtro } = useContext(AuthContext);
+  const { transacoes, filtro, deleteTransacoes } = useContext(AuthContext);
 
   const [currentItems, setCurrentItems] = useState([]);
   const [pageCount, setPageCount] = useState(0);
@@ -33,8 +34,8 @@ const Transacao = () => {
             ? filtro.map((transacao) => (
               <ul key={transacao.id}>
               <li>
-              <span className="descricao">{transacao.inputValor.descricao}</span>
-              <span className={transacao.despesa ? "red" : "azul"}>
+                <span className="descricao">{transacao.inputValor.descricao}</span>
+                <span className={transacao.despesa ? "red" : "azul"}>
               {transacao.despesa === true && " - "}
                 {new Intl.NumberFormat("pt-BR", {
                   style: "currency",
@@ -42,6 +43,7 @@ const Transacao = () => {
                 }).format(transacao.inputValor.quantia)}</span>
               <span className="categoria">{transacao.inputValor.categoria}</span>
               <span className="data">{transacao ? format(newDate, "dd/MM/yyyy") : ""}</span>
+              <span className="lixeira"><img onClick={() => deleteTransacoes(transacao.id)} className="lixo" src={lixeira} alt="lixeira" /></span>
               </li>
             </ul>
               ))
@@ -49,8 +51,8 @@ const Transacao = () => {
               currentItems?.map((transacao) => (
                 <ul key={transacao.id}>
                   <li>
-                  <span className="descricao">{transacao.inputValor.descricao}</span>
-                  <span className={transacao.despesa ? "red" : "azul"}>
+                    <span className="descricao">{transacao.inputValor.descricao}</span>
+                    <span className={transacao.despesa ? "red" : "azul"}>
                   {transacao.despesa === true && " - "}
                     {new Intl.NumberFormat("pt-BR", {
                       style: "currency",
@@ -58,6 +60,7 @@ const Transacao = () => {
                     }).format(transacao.inputValor.quantia)}</span>
                   <span className="categoria">{transacao.inputValor.categoria}</span>
                   <span className="data">{transacao ? format(newDate, "dd/MM/yyyy") : ""}</span>
+                  <span className="lixeira"><img onClick={() => deleteTransacoes(transacao.id)} className="lixo" src={lixeira} alt="lixeira" /></span>
                   </li>
                 </ul>
               ))} 

@@ -1,4 +1,4 @@
-import React , {useEffect, useState} from 'react';
+import React , {useEffect, useState, useContext} from 'react';
 import './App.css';
 import Header from './components/Header';
 import Resumo from './components/Resumo';
@@ -7,7 +7,7 @@ import BuscarTransacoes from './components/BuscarTransacoes';
 import NovaTransacao from './components/NovaTransacao';
 import ContainerTransacoes from './components/ContainerTransacoes';
 import { AuthContext } from './components/UseContext/AuthContext';
-import { useContext } from 'react';
+
 
 
 
@@ -30,6 +30,11 @@ function fecharModal() {
 
 const { transacoes } = useContext(AuthContext);
 console.log(transacoes)
+
+useEffect(()=>{
+  localStorage.setItem('transactions', JSON.stringify(transacoes));
+},[transacoes])
+
 
 useEffect(() => {
   const atualizarLarguraTela = () => {
